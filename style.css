@@ -1,0 +1,93 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, rgba(0,18,175,1) 0%, rgba(190,37,207,1) 56%, rgba(229,96,255,1) 100%);
+  background-attachment: fixed;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 30px;
+}
+
+h3 {
+  color: #333;
+}
+
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#lockButton {
+  font-size: 1.1rem;
+}
+
+#saldoAtualValue {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.count-box {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#vitoriaCount {
+  background-color: #d4edda;
+}
+
+#derrotaCount {
+  background-color: #f8d7da;
+}
+
+#alertMessage {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.alert-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.alert-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+#loadingSpinner {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+      margin-top: 20px;
+      padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-4, .col-md-6 {
+      margin-bottom: 15px;
+  }
+}

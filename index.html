@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Opções Binárias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h3 class="text-center mb-4">Gerenciador de Opções Binárias</h3>
+
+                <!-- Formulário de Entradas -->
+                <div class="form-group">
+                    <label for="saldoInicial">Saldo Inicial (USD):</label>
+                    <input type="number" id="saldoInicial" class="form-control" placeholder="Digite o saldo inicial" />
+                </div>
+                <div class="form-group">
+                    <label for="meta">Meta (USD):</label>
+                    <input type="number" id="meta" class="form-control" placeholder="Digite sua meta" />
+                </div>
+                <div class="form-group">
+                    <label for="entrada">Valor da Entrada (USD):</label>
+                    <input type="number" id="entrada" class="form-control" placeholder="Digite o valor da entrada" />
+                </div>
+                <div class="form-group">
+                    <label for="porcentagem">Porcentagem de Ganho (%):</label>
+                    <input type="number" id="porcentagem" class="form-control" placeholder="Digite a porcentagem de ganho" />
+                </div>
+                <div class="form-group">
+                    <label for="stopLoss">Stop Loss (USD):</label>
+                    <input type="number" id="stopLoss" class="form-control" placeholder="Digite seu Stop Loss" />
+                </div>
+
+                <!-- Botão para travar informações -->
+                <button id="lockButton" class="btn btn-primary w-100">
+                    <i class="fas fa-lock"></i> Travar Dados
+                </button>
+
+                <!-- Exibição do saldo -->
+                <h4 class="mt-4">Saldo Atual: <span id="saldoAtualValue">$0.00</span></h4>
+
+                <!-- Contadores de Vitória e Derrota -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div id="vitoriaCount" class="count-box">
+                            Vitórias: <span>0</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="derrotaCount" class="count-box">
+                            Derrotas: <span>0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botões de Vitória e Derrota -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <button id="winButton" class="btn btn-success w-100">
+                            <i class="fas fa-check-circle"></i> Vitória
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button id="lossButton" class="btn btn-danger w-100">
+                            <i class="fas fa-times-circle"></i> Derrota
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Alerta de Meta e Stop Loss -->
+                <div id="alertMessage" class="alert d-none mt-4"></div>
+
+                <!-- Spinner de Carregamento -->
+                <div id="loadingSpinner" class="d-none text-center mt-4">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Carregando...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
